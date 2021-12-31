@@ -147,7 +147,7 @@ $(document).ready(function () {
 
     for (var i = 0; i < share_bar.length; i++) {
         var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
-            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=ramswarooppatra&amp;hashtags=ramandantara&amp;count=horizontal"' +
+            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=ramswarooppatra&amp;hashtags=ramandTed&amp;count=horizontal"' +
             'style="width:105px; height:21px;">' +
             '</iframe>' +
 
@@ -184,7 +184,7 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Jenny and Ted's Wedding",
 
             // Event start date
             start: new Date('Nov 27, 2017 10:00'),
@@ -218,7 +218,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbyeFex2fc40sSgrQvB7BZn2Ce91LAErYefqXoF_8cJE7APxglEprOHKhbzq6i0tpxZZ/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -240,8 +240,8 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+function initMap() { //42.81209399546211, -71.26301768667254
+    var location = {lat: 42.81209399546211, lng: -71.26301768667254};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
